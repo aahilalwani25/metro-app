@@ -2,10 +2,11 @@
  * @format
  */
 
-import {AppRegistry} from 'react-native';
+import { AppRegistry } from 'react-native';
 import App from './App';
-import {name as appName} from './app.json';
-import {Navigation} from 'react-native-navigation';
+import { name as appName } from './app.json';
+import { Navigation } from 'react-native-navigation';
+import HomeScreen from './src/screens/HomeScreen';
 
 function Main(Component) {
   return function inject(props) {
@@ -21,6 +22,7 @@ function Main(Component) {
 }
 
 Navigation.registerComponent('splash-screen', () => App);
+Navigation.registerComponent('home-screen', () => HomeScreen)
 
 Navigation.setDefaultOptions({
   topBar: {
