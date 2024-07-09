@@ -5,9 +5,9 @@ import style from '../../global/styles'
 import colors from '../../theme/colors'
 import icons from '../../theme/icons'
 
-const MenuButton = () => {
+const MenuButton = ({onPress}) => {
     return (
-        <TouchableOpacity onPress={()=>{}} style={[styles.button, {
+        <TouchableOpacity onPress={onPress} style={[styles.button, {
             width: style.width*0.1,
             height: style.width*0.1,
             borderRadius:50
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderColor: colors.white,
         borderWidth: 2,
-
+        elevation:5,
         alignItems: 'center',
         justifyContent: 'center'
     }

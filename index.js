@@ -7,6 +7,8 @@ import App from './App';
 import { name as appName } from './app.json';
 import { Navigation } from 'react-native-navigation';
 import HomeScreen from './src/screens/HomeScreen';
+import AboutUsScreen from './src/screens/AboutUsScreen';
+import ContactUsScreen from './src/screens/ContactUsScreen';
 
 function Main(Component) {
   return function inject(props) {
@@ -23,6 +25,9 @@ function Main(Component) {
 
 Navigation.registerComponent('splash-screen', () => App);
 Navigation.registerComponent('home-screen', () => HomeScreen)
+Navigation.registerComponent('about-us',()=>AboutUsScreen)
+Navigation.registerComponent('contact-us',()=>ContactUsScreen)
+
 
 Navigation.setDefaultOptions({
   topBar: {
