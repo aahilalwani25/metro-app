@@ -11,13 +11,15 @@ import RenderMenuItems from '../components/MenuItems/MenuItems';
 const SideBarMenuScreen = forwardRef(({ slideAnimation, componentId }, ref) => {
 
     function navigate(item){
-        switch(item){
-            case "About":
-                navigator.push('about-us',componentId);
-            case "Contact Us":
-                navigator.push('contact-us', componentId);
-            default:
-                console.log("no screen present")
+
+        if(item==="About"){
+            navigator.push('about-us',componentId);
+        }
+        else if(item==="Contact Us"){
+            navigator.push('contact-us', componentId);
+        }
+        else{
+            console.log("No screen")
         }
     }
 
