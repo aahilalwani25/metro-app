@@ -7,16 +7,14 @@ import Black2Text from '../components/Text/Black2Text'
 
 const AboutUsScreen = ({ componentId }) => {
   return (
-    <View style={[styles.mainStyles.primaryBackgroundColor, styles.width]}>
-      <View style={[styles.width, styles.height * 0.1, { alignItems: 'center',  marginTop: styles.height*0.05}]}>
-        <NavBar title={'About Us'} componentId={componentId} />
-      </View>
+    <View style={[styles.mainStyles.primaryBackgroundColor, styles.width,{height:styles.height}]}>
 
+      <NavBar title={'About Us'} componentId={componentId} />
       <ScrollView>
         <View style={
-          { marginHorizontal:styles.width*0.1, marginTop: styles.height*0.05, height: styles.height*0.75, justifyContent:'space-around'}}>
+          { marginHorizontal: styles.width * 0.1, marginTop: styles.height * 0.05, height: styles.height * 0.75, justifyContent: 'space-around' }}>
 
-          <View style={{alignItems:'flex-start'}}>
+          <View style={{ alignItems: 'flex-start' }}>
             <BlueText fontSize={30} fontWeight={500}>About Us</BlueText>
           </View>
 

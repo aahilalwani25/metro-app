@@ -7,16 +7,19 @@ import Line from '../components/Line';
 import images from '../theme/images';
 import navigator from '../navigation/navigator';
 import RenderMenuItems from '../components/MenuItems/MenuItems';
+import { ABOUT_US, CONTACT_US, WEATHER } from '../global/constants';
 
 const SideBarMenuScreen = forwardRef(({ slideAnimation, componentId }, ref) => {
 
     function navigate(item){
-
-        if(item==="About"){
+        if(item===ABOUT_US){
             navigator.push('about-us',componentId);
         }
-        else if(item==="Contact Us"){
+        else if(item===CONTACT_US){
             navigator.push('contact-us', componentId);
+        }
+        else if(item===WEATHER){
+            navigator.push('weather-screen', componentId)
         }
         else{
             console.log("No screen")

@@ -9,6 +9,7 @@ import { Navigation } from 'react-native-navigation';
 import HomeScreen from './src/screens/HomeScreen';
 import AboutUsScreen from './src/screens/AboutUsScreen';
 import ContactUsScreen from './src/screens/ContactUsScreen';
+import WeatherScreen from './src/screens/WeatherScreen';
 
 function Main(Component) {
   return function inject(props) {
@@ -27,6 +28,7 @@ Navigation.registerComponent('splash-screen', () => App);
 Navigation.registerComponent('home-screen', () => HomeScreen)
 Navigation.registerComponent('about-us',()=>AboutUsScreen)
 Navigation.registerComponent('contact-us',()=>ContactUsScreen)
+Navigation.registerComponent('weather-screen',()=>WeatherScreen)
 
 
 Navigation.setDefaultOptions({

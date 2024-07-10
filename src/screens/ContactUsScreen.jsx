@@ -9,10 +9,10 @@ import colors from '../theme/colors'
 
 const ContactUsScreen = ({ componentId }) => {
   return (
-    <View style={[{backgroundColor:colors.white}, styles.width]}>
-      <View style={[styles.width, styles.height * 0.1, { alignItems: 'center', marginTop: styles.height * 0.05 }]}>
-        <NavBar title={'Contact Us'} componentId={componentId} />
-      </View>
+    <View style={[{ backgroundColor: colors.white }, styles.width]}>
+
+      <NavBar title={'Contact Us'} componentId={componentId} />
+
 
       <View style={
         { marginHorizontal: styles.width * 0.1, height: styles.height * 0.3, justifyContent: 'space-around' }}>
@@ -22,7 +22,7 @@ const ContactUsScreen = ({ componentId }) => {
 
         <TouchableOpacity
           onPress={() => { }}
-          style={{ width: styles.width * 0.8, height: styles.height * 0.07, justifyContent: 'center', backgroundColor:'#effaff', borderRadius:8 }}>
+          style={{ width: styles.width * 0.8, height: styles.height * 0.07, justifyContent: 'center', backgroundColor: '#effaff', borderRadius: 8 }}>
           <View style={[{ justifyContent: 'space-around', alignItems: 'center' }, styles.mainStyles.row]}>
             <View style={[styles.mainStyles.row, { width: styles.width * 0.6 }]}>
               <Image style={{ left: styles.width * 0.05, }} source={icons["smsEdit"]} />
