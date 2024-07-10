@@ -3,5 +3,6 @@ export default {
     logo: require('../assets/icons/logo.png'),
     homeScreen: require('../assets/images/home-screen.png'),
     flagMalaysia: require('../assets/images/flag-malaysia.png'),
-    thunderstorm: require('../assets/images/thunderstorm.png')
+    thunderstorm: require('../assets/images/thunderstorm.png'),
+    
 }
