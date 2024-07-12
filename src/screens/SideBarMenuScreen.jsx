@@ -8,8 +8,13 @@ import images from '../theme/images';
 import navigator from '../navigation/navigator';
 import RenderMenuItems from '../components/MenuItems/MenuItems';
 import { ABOUT_US, CONTACT_US, WEATHER } from '../global/constants';
+import i18next from '../services/i18next';
+import { useTranslation } from 'react-i18next';
+
 
 const SideBarMenuScreen = forwardRef(({ slideAnimation, componentId }, ref) => {
+
+    const {t}= useTranslation();
 
     function navigate(item){
         if(item===ABOUT_US){
@@ -36,8 +41,8 @@ const SideBarMenuScreen = forwardRef(({ slideAnimation, componentId }, ref) => {
                 <View style={[styles.mainStyles.row,]}>
                     <Image source={icons['dubaiGuide']} />
                     <View>
-                        <Text style={sideBarMenuStyles.dubaiText}>Dubai</Text>
-                        <Text style={sideBarMenuStyles.guideText}>Guide</Text>
+                        <Text style={sideBarMenuStyles.dubaiText}>{t('dubai')}</Text>
+                        <Text style={sideBarMenuStyles.guideText}>{t('guide')}</Text>
                     </View>
                 </View>
 

@@ -9,7 +9,9 @@ import colors from '../theme/colors'
 
 const ContactUsScreen = ({ componentId }) => {
   return (
-    <View style={[{ backgroundColor: colors.white }, styles.width]}>
+    <View style={[{ backgroundColor: colors.white }, styles.width, {
+      height:styles.height
+    }]}>
 
       <NavBar title={'Contact Us'} componentId={componentId} />
 

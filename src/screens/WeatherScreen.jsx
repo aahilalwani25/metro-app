@@ -47,21 +47,24 @@ const WeatherScreen = ({ componentId }) => {
     }, []);
 
     const renderWeatherItem = useCallback(({ item }) => (
-        // <View>
-        //     <Text style={{ color: colors.black }}>Date: {item.dt_txt}</Text>
-        //     <Text style={{ color: colors.black }}>Temperature: {item.main.temp}°C</Text>
-        //     <Text style={{ color: colors.black }}>Feels Like: {item.main.feels_like}°C</Text>
-        //     <Text style={{ color: colors.black }}>Description: {item.weather[0].description}</Text>
-        // </View>
-
-        <DailyWeatherCard temp={item.main.temp} weatherIcon={item.weather[0].main} description={item.weather[0].description}/>
+        <DailyWeatherCard
+            temp={item.main.temp}
+            weatherIcon={item.weather[0].main}
+            description={item.weather[0].description} />
     ), []);
 
     return (
         <View style={[styles.mainStyles.primaryBackgroundColor, styles.mainStyles.fullScreen, { alignItems: 'center' }]}>
             <NavBar title={'Weather'} componentId={componentId} />
 
-            <View style={[{ width: styles.width * 0.9, height: styles.height * 0.2, alignItems: 'center', justifyContent: 'space-around' }, styles.mainStyles.row]}>
+            <View
+                style={[{
+                    width: styles.width * 0.9,
+                    height: styles.height * 0.2,
+                    alignItems: 'center',
+                    justifyContent: 'space-around'
+                },
+                styles.mainStyles.row]}>
 
                 <View>
                     <Text style={[{
@@ -114,7 +117,7 @@ const WeatherScreen = ({ componentId }) => {
                     keyExtractor={item => item.dt.toString()}
                 />
             ) : (
-                <ActivityIndicator color={colors.blue2}/>
+                <ActivityIndicator color={colors.blue2} />
             )}
         </View>
     )

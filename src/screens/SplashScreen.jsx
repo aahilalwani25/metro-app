@@ -61,7 +61,9 @@ const SplashScreen = ({ componentId }) => {
 
 
   return (
-    <View style={[styles.fullScreen, styles.primaryBackgroundColor]}>
+    <View style={[styles.fullScreen, styles.mainStyles.primaryBackgroundColor,{
+      height: styles.height
+    }]}>
       <Animated.Image
         style={[{
           transform: [
@@ -100,6 +102,7 @@ const style = StyleSheet.create({
   dubaiText: {
     fontSize: 42,
     fontWeight: 800,
+    color: colors.black
   },
   metroText: {
     fontSize: 42,

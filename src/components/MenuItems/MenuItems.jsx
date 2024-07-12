@@ -1,12 +1,15 @@
 import navigator from "../../navigation/navigator";
 import colors from "../../theme/colors";
 import icons from "../../theme/icons";
+import { useTranslation } from 'react-i18next';
 
-const { useCallback } = require("react");
 const { TouchableOpacity, View, Image, Text, StyleSheet } = require("react-native");
 const { default: styles } = require("../../global/styles");
 
 const RenderMenuItems = ({ item, onPress }) => {
+
+    const {t}= useTranslation();
+
 
     return (
         <TouchableOpacity 
@@ -15,7 +18,7 @@ const RenderMenuItems = ({ item, onPress }) => {
             <View style={[{ justifyContent: 'space-between', alignItems: 'center' }, styles.mainStyles.row]}>
                 <View style={[styles.mainStyles.row, { width: styles.width * 0.3 }]}>
                     <Image style={{ left: styles.width * 0.05, }} source={icons[item]} />
-                    <Text style={[{ left: styles.width * 0.1, }, menuItemStyles.itemText]}>{item}</Text>
+                    <Text style={[{ left: styles.width * 0.1, }, menuItemStyles.itemText]}>{t(item.toLowerCase().replaceAll(' ','-'))}</Text>
                 </View>
                 <View>
                     <Image source={icons["rightArrow"]} />
