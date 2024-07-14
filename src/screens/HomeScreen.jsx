@@ -12,6 +12,7 @@ import toggle from '../global/toggle';
 import LanguageLists from '../components/LanguageList/LanguageLists';
 import i18next from '../services/i18next';
 import { useTranslation } from 'react-i18next';
+import navigator from '../navigation/navigator';
 
 
 const HomeScreen = ({ componentId }) => {
@@ -71,18 +72,18 @@ const HomeScreen = ({ componentId }) => {
 
                         <View style={[{ width: main.width, height: main.height * 0.1, marginTop: main.height * 0.05 }]}>
                             <View style={[styles.buttonContainer]}>
-                                <PrimaryButton title={t('metro-map')} width={0.4} height={0.08} />
-                                <PrimaryButton title={t('things-to-do')} width={0.4} height={0.08} />
+                                <PrimaryButton onPress={()=>navigator.push('map-screen')} title={t('metro-map')} width={0.4} height={0.08} />
+                                <PrimaryButton onPress={()=>navigator.push('map-screen')} title={t('things-to-do')} width={0.4} height={0.08} />
                             </View>
 
                             <View style={[styles.buttonContainer]}>
-                                <PrimaryButton title={t('hotel-booking')} width={0.4} height={0.08} />
-                                <PrimaryButton title={t('weather')} width={0.4} height={0.08} />
+                                <PrimaryButton onPress={()=>navigator.push('map-screen')} title={t('hotel-booking')} width={0.4} height={0.08} />
+                                <PrimaryButton onPress={()=>navigator.push('weather-screen')} title={t('weather')} width={0.4} height={0.08} />
                             </View>
 
                             <View style={[styles.buttonContainer]}>
-                                <PrimaryButton title={t('about')} width={0.4} height={0.08} />
-                                <PrimaryButton title={t('contact')} width={0.4} height={0.08} />
+                                <PrimaryButton onPress={()=>navigator.push('about-us')} title={t('about')} width={0.4} height={0.08} />
+                                <PrimaryButton onPress={()=>navigator.push('contact-us')} title={t('contact')} width={0.4} height={0.08} />
                             </View>
                         </View>
                     </View>

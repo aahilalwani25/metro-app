@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {WEATHER_API_KEY,BASE_URL_WEATHER} from '@env'
 
-const Helper = async ({ endpoint, query, method }) => {
+const Helper = async ({ endpoint, query, body, method }) => {
     const url = `${BASE_URL_WEATHER}${endpoint}`;
 
     const options = {
@@ -21,6 +21,13 @@ const Helper = async ({ endpoint, query, method }) => {
                         appid: WEATHER_API_KEY,
                         units: 'metric' // Added units parameter directly here
                     },
+                    ...options
+                });
+                break;
+
+            case 'POST':
+                res= await axios.post(url,{
+                    body,
                     ...options
                 });
                 break;

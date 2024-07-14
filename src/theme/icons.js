@@ -16,6 +16,7 @@ export default {
     leftArrow: require('../assets/icons/icon-arrow-left.png'),
     guard: require('../assets/icons/icon-guard.png'),
     smsEdit: require('../assets/icons/icon-sms-edit.png'),
-    Clouds: require('../assets/icons/icon-little-cloud.png')
-
+    Clouds: require('../assets/icons/icon-little-cloud.png'),
+    starActive: require('../assets/icons/icon-star-active.png'),
+    share: require('../assets/icons/icon-share.png')
 }

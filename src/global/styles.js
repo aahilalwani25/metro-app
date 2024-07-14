@@ -32,6 +32,10 @@ const mainStyles= StyleSheet.create({
     },
     column:{
         flexDirection:'column'
+    },
+    bg_image:{
+        position:'absolute',
+        
     }
     
 })

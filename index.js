@@ -10,6 +10,10 @@ import HomeScreen from './src/screens/HomeScreen';
 import AboutUsScreen from './src/screens/AboutUsScreen';
 import ContactUsScreen from './src/screens/ContactUsScreen';
 import WeatherScreen from './src/screens/WeatherScreen';
+import MapScreen from './src/screens/MapScreen';
+import EventsScreen from './src/screens/EventsScreen';
+import store from './src/redux/store';
+import { Provider } from 'react-redux';
 
 function Main(Component) {
   return function inject(props) {
@@ -24,11 +28,13 @@ function Main(Component) {
   };
 }
 
-Navigation.registerComponent('splash-screen', () => App);
-Navigation.registerComponent('home-screen', () => HomeScreen)
-Navigation.registerComponent('about-us',()=>AboutUsScreen)
-Navigation.registerComponent('contact-us',()=>ContactUsScreen)
-Navigation.registerComponent('weather-screen',()=>WeatherScreen)
+Navigation.registerComponent('splash-screen', () => Main(App));
+Navigation.registerComponent('home-screen', () => Main(HomeScreen))
+Navigation.registerComponent('about-us',()=>Main(AboutUsScreen))
+Navigation.registerComponent('contact-us',()=>Main(ContactUsScreen))
+Navigation.registerComponent('weather-screen',()=>Main(WeatherScreen))
+Navigation.registerComponent('map-screen',()=>Main(MapScreen))
+Navigation.registerComponent('events-screen',()=>Main(EventsScreen))
 
 
 Navigation.setDefaultOptions({

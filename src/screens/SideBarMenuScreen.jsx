@@ -7,8 +7,7 @@ import Line from '../components/Line';
 import images from '../theme/images';
 import navigator from '../navigation/navigator';
 import RenderMenuItems from '../components/MenuItems/MenuItems';
-import { ABOUT_US, CONTACT_US, WEATHER } from '../global/constants';
-import i18next from '../services/i18next';
+import { ABOUT_US, CONTACT_US, EVENTS, METRO_MAP, WEATHER } from '../global/constants';
 import { useTranslation } from 'react-i18next';
 
 
@@ -25,6 +24,12 @@ const SideBarMenuScreen = forwardRef(({ slideAnimation, componentId }, ref) => {
         }
         else if(item===WEATHER){
             navigator.push('weather-screen', componentId)
+        }
+        else if(item===METRO_MAP){
+            navigator.push('map-screen', componentId)
+        }
+        else if(item===EVENTS){
+            navigator.push('events-screen', componentId)
         }
         else{
             console.log("No screen")

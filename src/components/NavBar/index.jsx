@@ -6,12 +6,12 @@ import BackButton from '../Button/BackButton';
 import navigator from '../../navigation/navigator';
 import PrimaryBlackText from '../Text/PrimaryBlackText';
 
-const NavBar = ({ componentId, title }) => {
+const NavBar = ({ componentId, title, style }) => {
 
     const slideAnimation = useRef(new Animated.Value(0)).current;
 
     return (
-        <View style={[styles.width, styles.height * 0.1, { alignItems: 'center', marginTop: styles.height * 0.05 }]}>
+        <View style={[styles.width, styles.height * 0.1, { alignItems: 'center', marginTop: styles.height * 0.05,...style },]}>
             <View style={[{ width: styles.width }, { justifyContent: 'center', alignItems: 'center', top: 10 }]}>
                 <View style={[styles.mainStyles.row, { width: styles.width * 0.8 },
                 { justifyContent: 'space-between', alignItems: 'center' }]}>
