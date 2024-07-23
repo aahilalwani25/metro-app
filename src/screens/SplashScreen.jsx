@@ -2,9 +2,7 @@ import { View, Text, Image, Animated, useAnimatedValue, Easing, StyleSheet } fro
 import React, { useEffect } from 'react'
 import images from '../theme/images'
 import styles from '../global/styles'
-import metrics from '../global/metrics'
 import colors from '../theme/colors'
-import fonts from '../theme/fonts'
 import navigator from '../navigation/navigator'
 
 

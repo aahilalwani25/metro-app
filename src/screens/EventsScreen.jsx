@@ -9,7 +9,7 @@ const EventsScreen = ({ componentId }) => {
 
   return (
 
-    <ScrollView nestedScrollEnabled>
+    <ScrollView nestedScrollEnabled scrollEnabled>
 
     
     <View
@@ -23,7 +23,7 @@ const EventsScreen = ({ componentId }) => {
 
 
       <FlatList
-        numColumns={2}
+        //numColumns={2}
         key={(item, index) => index.toString()}
         ItemSeparatorComponent={() => <View style={{ justifyContent: 'space-around' }} />}
         data={event_data}

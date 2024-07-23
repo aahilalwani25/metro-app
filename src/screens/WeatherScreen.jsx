@@ -40,13 +40,28 @@ const WeatherScreen = ({ componentId }) => {
         fetchW();
     }, [fetchW]);
 
-    const renderWeatherItem = useCallback(({ item }) => (
-        <DailyWeatherCard
-            temp={item.main.temp}
-            weatherIcon={item.weather[0].main}
-            description={item.weather[0].description}
-        />
-    ), []);
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
+    const renderWeatherItem = useCallback(({ item }) => {
+        const dateString= item.dt_txt.split(' ')[0];
+
+        const newDate = new Date(dateString);
+        // Get the day of the week (0-6)
+        const dayOfWeek = newDate.getDay();
+
+        // Get the corresponding day name
+        const dayName = daysOfWeek[dayOfWeek];
+
+        return (
+            <DailyWeatherCard
+            day={dayName}
+                temp={item.main.temp}
+                weatherIcon={item.weather[0].main}
+                description={item.weather[0].description}
+            />
+        )
+    }, []);
 
     return (
         <View style={[styles.mainStyles.primaryBackgroundColor, styles.mainStyles.fullScreen, { alignItems: 'center' }]}>

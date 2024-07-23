@@ -14,6 +14,7 @@ import MapScreen from './src/screens/MapScreen';
 import EventsScreen from './src/screens/EventsScreen';
 import store from './src/redux/store';
 import { Provider } from 'react-redux';
+import ThingsToDoScreen from './src/screens/ThingsToDoScreen';
 
 function Main(Component) {
   return function inject(props) {
@@ -35,6 +36,7 @@ Navigation.registerComponent('contact-us',()=>Main(ContactUsScreen))
 Navigation.registerComponent('weather-screen',()=>Main(WeatherScreen))
 Navigation.registerComponent('map-screen',()=>Main(MapScreen))
 Navigation.registerComponent('events-screen',()=>Main(EventsScreen))
+Navigation.registerComponent('things-to-do-screen',()=>Main(ThingsToDoScreen))
 
 
 Navigation.setDefaultOptions({

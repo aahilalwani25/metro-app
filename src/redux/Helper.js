@@ -19,7 +19,7 @@ const Helper = async ({ endpoint, query, body, method }) => {
                     params: {
                         q: query.city,
                         appid: WEATHER_API_KEY,
-                        units: 'metric' // Added units parameter directly here
+                        //units: 'metric' // Added units parameter directly here
                     },
                     ...options
                 });

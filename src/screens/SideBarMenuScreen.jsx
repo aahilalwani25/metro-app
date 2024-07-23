@@ -39,7 +39,7 @@ const SideBarMenuScreen = forwardRef(({ slideAnimation, componentId }, ref) => {
 
     return (
 
-        <View ref={ref} style={[sideBarMenuStyles.container, { width: slideAnimation }]}>
+        <View ref={ref} style={[sideBarMenuStyles.container]}>
             {/* <View style={[{ width: styles.width * 0.4,},styles.height,{backgroundColor:'gray'}]}/> */}
             <View style={{ width: styles.width * 0.7, justifyContent: 'center', alignItems: 'center', top: styles.height * 0.05 }}>
 

@@ -6,9 +6,11 @@ import BackButton from '../Button/BackButton';
 import navigator from '../../navigation/navigator';
 import PrimaryBlackText from '../Text/PrimaryBlackText';
 
-const NavBar = ({ componentId, title, style }) => {
 
-    const slideAnimation = useRef(new Animated.Value(0)).current;
+const NavBar = ({ componentId, toggleSideBar, title, style, isSideBarVisible, slideAnimation, animatedWidth, setIsSideBarVisible }) => {
+
+    
+    //const slideAnimation = useRef(new Animated.Value(0)).current;
 
     return (
         <View style={[styles.width, styles.height * 0.1, { alignItems: 'center', marginTop: styles.height * 0.05,...style },]}>
@@ -17,7 +19,7 @@ const NavBar = ({ componentId, title, style }) => {
                 { justifyContent: 'space-between', alignItems: 'center' }]}>
                     <BackButton onPress={() => navigator.pop(componentId)} />
                     <PrimaryBlackText fontSize={20} fontWeight={600}>{title}</PrimaryBlackText>
-                    <MenuButton onPress={() => toggle.toggleSideBar(setIsSideBarVisible, isSideBarVisible, slideAnimation)} />
+                    <MenuButton onPress={() => toggleSideBar()} />
                 </View>
             </View>
         </View>
